@@ -55,7 +55,7 @@ class HomeScreenState extends State<HomeScreen> {
                     backgroundColor:  Colors.blue,
                     onPressed: () {
                       setState(() {
-                        studentlist.add(studetmodal());//add  call model class and object that add in item list;
+                        studentlist.add(studetmodal());
                       });
                     },
                     child: Icon(Icons.person_add_outlined),),

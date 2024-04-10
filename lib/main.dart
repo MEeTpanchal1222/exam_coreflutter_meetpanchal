@@ -35,8 +35,7 @@ class _studentAPPState extends State<studentAPP> {
       routes: {
         '/':(context) => SplashScreen(),
         '/home':(context)=>HomeScreen(),
-        // '/input':(context)=>inputallscreen(),
-        // '/edit':(context)=>editscreen(),
+
       },
     );
   }

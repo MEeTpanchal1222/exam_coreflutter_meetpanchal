@@ -7,14 +7,13 @@ import '../modal.dart';
 
 class studentcardWidget extends StatelessWidget {
   final studetmodal student;
-  final VoidCallback onDelete;//voidcallback is representing a function that takes no arguments and returns void.
+  final VoidCallback onDelete;
   studentcardWidget(
       {Key ?key, required this.student, required this.onDelete}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      //I use card widget ✔
       child: Padding(
         padding: EdgeInsets.all(20.0),
         child: Column(
@@ -63,19 +62,20 @@ class studentcardWidget extends StatelessWidget {
 
                   },
                   child: Icon(Icons.edit),
-                  backgroundColor: Colors.blue[100],
+                  backgroundColor: Colors.blue[200],
                 ),
               ],
             ),
+            SizedBox(height: 10,),
             Row(
               children: [
                 Expanded(
                   flex: 1,
                   child: TextFormField(
-                    initialValue: student.student_grid.toString(),//this most valuble initailvalue that tostring;
+                    initialValue: student.student_grid.toString(),
                     keyboardType: TextInputType.number,
                     onChanged: (value) {
-                      student.student_grid = int.tryParse(value) ?? 0;//if that is no value then in pdf we see amount is 0.0;
+                      student.student_grid = int.tryParse(value) ?? 0;
                     },
                     decoration: InputDecoration(labelText: 'GR_ID'),
                   ),
@@ -90,11 +90,10 @@ class studentcardWidget extends StatelessWidget {
                     decoration: InputDecoration(labelText: 'STUDENT STANDARD',),
                   ),
                 ),
-
                 FloatingActionButton(
                   child: Icon(Icons.delete),
-                  backgroundColor: Colors.blue[100],
-                  onPressed: onDelete, //we add function at home screen; by call function ;
+                  backgroundColor: Colors.blue[200],
+                  onPressed: onDelete,
                 ),
               ],
             )
